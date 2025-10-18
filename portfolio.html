@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><title>Cartoon — Portfolio</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Comic+Neue:wght@700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"><link rel="icon" href="assets/logo.png"></head><body><div class="page-wipe"><div class="wipe-layer"></div><div class="wipe-layer delay"></div></div>
+<div class="bg"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="stars"></span></div>
+<header class="site-header">
+<a class="brand" href="index.html"><img src="assets/logo.png"><div class="brand-text"><span class="brand-top">Cartoon    </span><span class="brand-sub">        FiveM Animations & Scripts</span></div></a>
+<nav class="nav">
+<button class="nav-toggle" aria-expanded="false"><span></span><span></span><span></span></button>
+<ul class="nav-list">
+<li><a href="index.html" class="link">Home</a></li>
+<li><a href="portfolio.html" class="link">Portfolio</a></li>
+<li><a href="about.html" class="link">About</a></li>
+</ul>
+<button class="theme-toggle"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M21.64 13A9 9 0 0111 2.36a9 9 0 1010.64 10.64z"></path></svg></button>
+</nav></header>
+<main class="page">
+<section class="section">
+<div class="section-head"><h2 class="section-title">Portfolio</h2><p class="muted">Hover for details; click for modal.</p></div>
+<div class="filters"><button class="chip is-active" data-filter="all">All</button><button class="chip" data-filter="animation">Animations</button><button class="chip" data-filter="script">Scripts</button><button class="chip" data-filter="props">Props/UI</button></div>
+<div class="grid portfolio-grid">
+<article class="card" data-type="animation"><div class="card-media"><div class="pill tag">Animation</div><div class="preview waves"></div></div><div class="card-body"><h3 class="card-title">Targeted Cuffs Pack</h3><p class="card-text">/cuff selector, dual-prop cuffs, /uncuff, seat & grab, ox_target opt.</p><ul class="meta"><li>Lua</li><li>ox_lib</li><li>Props</li></ul><button class="btn small open-modal" data-project="cuffs">Details</button></div></article>
+<article class="card" data-type="script"><div class="card-media"><div class="pill tag">Script</div><div class="preview grid"></div></div><div class="card-body"><h3 class="card-title">Evidence & Forensics Suite</h3><p class="card-text">Casing IDs, microscope UI, blood overlays, breathalyzer, Discord routes.</p><ul class="meta"><li>NUI</li><li>Discord</li><li>Optimized</li></ul><button class="btn small open-modal" data-project="forensics">Details</button></div></article>
+<article class="card" data-type="props"><div class="card-media"><div class="pill tag">Props/UI</div><div class="preview dots"></div></div><div class="card-body"><h3 class="card-title">Axon Body‑Cam & Shield Kit</h3><p class="card-text">Attach props, shield pin, ankle holster walk cycles.</p><ul class="meta"><li>Props</li><li>Anim</li><li>Config</li></ul><button class="btn small open-modal" data-project="axon">Details</button></div></article>
+<article class="card" data-type="script"><div class="card-media"><div class="pill tag">Script</div><div class="preview stripes"></div></div><div class="card-body"><h3 class="card-title">Jail & Webhook Flow</h3><p class="card-text">Menu, player list, timed jail, reason capture, Discord webhook.</p><ul class="meta"><li>ox_lib</li><li>Server/Client</li><li>Discord</li></ul><button class="btn small open-modal" data-project="jail">Details</button></div></article>
+</div>

@@ -1,0 +1,13 @@
+function k(q){return document.querySelector(q)}function ka(q){return [...document.querySelectorAll(q)]}
+function w(){k(".page-wipe").classList.add("is-active")}function h(){k(".page-wipe").classList.remove("is-active")}
+ka("a.link").forEach(a=>{a.addEventListener("click",e=>{if(a.host===location.host){e.preventDefault();w();setTimeout(()=>{location.href=a.getAttribute("href")},350)}})})
+window.addEventListener("DOMContentLoaded",()=>{setTimeout(()=>h(),200)})
+const b=k(".nav-toggle");const ul=k(".nav-list");b&&b.addEventListener("click",()=>{ul.classList.toggle("open")})
+const t=k(".theme-toggle");t&&t.addEventListener("click",()=>{document.documentElement.classList.toggle("light")})
+const s=document.createElement("style");s.innerHTML=":root.light{--bg:#f7fafc;--bg2:#f0f3f9;--card:#ffffff;--ink:#0e1020;--muted:#47506b}";document.head.appendChild(s)
+const yr=k("#year");if(yr)yr.textContent=new Date().getFullYear()
+ka(".num").forEach(el=>{const m=Number(el.dataset.count||0);let n=0;const st=Math.ceil(m/60);const T=setInterval(()=>{n+=st;if(n>=m){n=m;clearInterval(T)}el.textContent=n},16)})
+const chips=ka(".chip");chips.forEach(c=>c.addEventListener("click",()=>{k(".chip.is-active")?.classList.remove("is-active");c.classList.add("is-active");const tp=c.dataset.filter;ka(".portfolio-grid .card").forEach(x=>x.style.display=(tp==="all"||x.dataset.type===tp)?"":"none")}))
+const M=k("[data-modal]");if(M){const close=()=>M.classList.remove("show");const x=k(".modal-close");x&&x.addEventListener("click",close);M.addEventListener("click",e=>{if(e.target===M)close()});
+const data={cuffs:{title:"Targeted Cuffs Pack",text:"Includes /cuff with list, dual-prop cuffs, /uncuff, seat & grab, ox_target, config.",repo:"#",demo:"#"},forensics:{title:"Evidence & Forensics Suite",text:"Casing IDs, microscope UI, blood, breathalyzer, Discord routing.",repo:"#",demo:"#"},axon:{title:"Axon Body‑Cam & Shield Kit",text:"Attach props, shield‑pin stance, ankle holster, offsets.",repo:"#",demo:"#"},jail:{title:"Jail & Webhook Flow",text:"Menu, player list, timed jail, reason, Discord webhook.",repo:"#",demo:"#"}};
+ka(".open-modal").forEach(b=>b.addEventListener("click",()=>{const id=b.dataset.project;const d=data[id];if(!d)return;M.querySelector(".modal-title").textContent=d.title;M.querySelector(".modal-text").textContent=d.text;M.querySelectorAll(".modal-actions a")[0].href=d.repo;M.querySelectorAll(".modal-actions a")[1].href=d.demo;M.classList.add("show")}))}
